@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg width="192" height="192" viewBox="0 0 192 192"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg">
+  <title>KAI LLC</title>
+  <g>
+    <rect fill="#a72525" width="192" height="192" x="0" y="0" />
+    <text fill="#fff" color="#fff" font-family="sans-serif" font-size="104" font-weight="bold" x="9" y="133" textLength="173">KAI</text>
+    <g stroke="#fff" stroke-width="16">
+      <line x1="16" x2="176" y1="28" y2="28" />
+      <line x1="16" x2="176" y1="164" y2="164" />
+    </g>
+  </g>
+</svg>

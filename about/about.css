@@ -1,0 +1,160 @@
+:root {
+  --house-bg: hsl(var(--hue) 50% 99% / 85%);
+  --house-border: hsl(var(--hue) 50% 25%);
+}
+#about {
+  position: relative;
+  margin: 0 auto;
+  max-width: 83rem;
+  z-index: 2;
+}
+.hero-img {
+  position: relative;
+}
+.hero-img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    hsl(var(--hue) 25% 95% / 10%),
+    hsl(var(--hue) 40% 60% / 10%),
+    hsl(var(--hue) 25% 25% / 10%)
+  );
+  z-index: 1;
+}
+.info-boxes {
+  background-color: hsl(0 0 99% / 95%);
+}
+.info-box {
+  padding: 1.5rem 1.75rem;
+  z-index: 1;
+}
+.info-box p {
+  margin: 0;
+}
+.learn-more {
+  position: relative;
+  margin: 0;
+  padding: 2rem 0 0.5rem;
+  overflow: hidden;
+  background: linear-gradient(
+    160deg,
+    hsl(var(--hue) 100% 70% / 10%),
+    hsl(var(--hue) 100% 50% / 35%)
+  );
+}
+.circle-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 30rem;
+  height: 30rem;
+  background: radial-gradient(
+    circle at center,
+    hsl(var(--hue) 60% 80% / 20%),
+    hsl(var(--hue) 60% 95% / 40%)
+  );
+  border: 0.25rem double #fff2;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.roof {
+  width: 0;
+  height: 0;
+  border-left: 9rem solid transparent;
+  border-right: 9rem solid transparent;
+  border-bottom: 8rem solid var(--house-bg);
+  z-index: 1;
+  margin: auto;
+  position: relative;
+}
+.rooftop {
+  z-index: 1;
+  margin: auto;
+  position: absolute;
+  top: 10.125rem;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg) skew(-4deg, -4deg);
+  height: 12.5rem;
+  width: 12.5rem;
+  border: 0.25rem solid transparent;
+  border-top-color: var(--house-border);
+  border-left-color: var(--house-border);
+}
+.house {
+  position: relative;
+  z-index: 1;
+  width: 18rem;
+  background-color: var(--house-bg);
+  padding: 1rem 1.75rem;
+  margin: 0 auto 2rem;
+  border-left: 0.25rem solid var(--house-border);
+  border-right: 0.25rem solid var(--house-border);
+  border-bottom: 0.25rem solid var(--house-border);
+}
+
+@media (width <= 55rem) {
+  .info-box:nth-child(2) {
+    padding: 0 1.75rem;
+  }
+}
+@media (55rem >= width > 42rem) {
+  .info-boxes {
+    position: relative;
+    border-radius: 0.25rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--white-transparent-bg);
+    max-width: 41rem;
+    margin: -26% auto 0;
+    z-index: 1;
+  }
+}
+@media (60rem > width > 55rem) {
+  .info-box {
+    padding: 1.125rem 1.25rem;
+  }
+}
+@media (width > 55rem) {
+  .info-boxes {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: transparent;
+  }
+  .info-box {
+    flex: 0 1 calc(100% / 3 - 1.25rem);
+    background-color: var(--white-transparent-bg);
+    border-radius: 0.125rem;
+    box-shadow: var(--box-shadow);
+  }
+  .info-box p,
+  .info-box h3 {
+    text-shadow: var(--text-shadow-white);
+  }
+}
+@media (width > 67rem) {
+  .info-boxes {
+    bottom: 10%;
+  }
+}
+@media (width > 83rem) {
+  #about {
+    overflow: hidden;
+    border-radius: 0.25rem;
+    box-shadow: var(--box-shadow);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/images/about-house.jpg");
+  }
+  .hero-img-bg {
+    opacity: 0;
+  }
+}
