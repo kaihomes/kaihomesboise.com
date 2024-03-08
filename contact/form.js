@@ -3,7 +3,7 @@
  * 2. Sends the message to Pipedream
  * --> (which then sends an email with all the info in it)
  */
-const url = "https://eoarkcq711k98ao.m.pipedream.net";
+const url = "https://eotxid8mqusel0u.m.pipedream.net";
 
 async function sendMessage(data = {}) {
   const headers = new Headers();
