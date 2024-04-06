@@ -334,19 +334,6 @@ h3 {
 .center {
   text-align: center;
 }
-.iframe-container {
-  box-shadow: var(--box-shadow);
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding: 200px 0 67%;
-}
-iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
 
 @media (width > 35rem) {
   h3 {
