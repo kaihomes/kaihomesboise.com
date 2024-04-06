@@ -1,0 +1,54 @@
+.portfolio-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-link {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+@media (width >= 36rem) {
+  .img-link {
+    width: 50%;
+  }
+}
+@media (width > 80rem) {
+  .img-link {
+    width: 25%;
+  }
+}
+.img-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      hsl(var(--hero-bg) / 1%),
+      hsl(var(--hero-bg) / 20%)
+    ),
+    radial-gradient(
+      hsl(var(--hue) 25% 95% / 10%),
+      hsl(var(--hue) 40% 60% / 10%),
+      hsl(var(--hue) 40% 60% / 10%),
+      hsl(var(--hue) 25% 10% / 20%)
+    );
+  opacity: 0.9;
+  transition: opacity 0.2s;
+  z-index: 1;
+}
+.img-link img {
+  object-fit: cover;
+  flex: 1 1 auto;
+  filter: grayscale(0.1);
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.img-link:hover img {
+  transform: scale(1.025);
+  filter: grayscale(0);
+}
+.img-link:hover::after {
+  opacity: 0;
+}

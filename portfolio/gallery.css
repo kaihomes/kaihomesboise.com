@@ -1,0 +1,103 @@
+.feature-bg {
+  background: radial-gradient(#555d, #111e);
+  position: relative;
+}
+.main-feature {
+  margin: auto;
+  width: fit-content;
+}
+#feature {
+  max-height: 62rem;
+}
+.arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 5rem;
+  opacity: 0.75;
+  color: #fff;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.arrow:hover {
+  opacity: 1;
+}
+.chevron {
+  margin: auto;
+}
+#prev {
+  left: 0;
+  background: linear-gradient(to left, transparent, hsl(0 0 0 / 5%));
+}
+#prev:hover {
+  background: linear-gradient(to left, transparent, hsl(0 0 0 / 30%));
+}
+#next {
+  right: 0;
+  background: linear-gradient(to right, transparent, hsl(0 0 0 / 5%));
+}
+#next:hover {
+  background: linear-gradient(to right, transparent, hsl(0 0 0 / 30%));
+}
+#gallery {
+  margin: 0.25rem 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.photo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (width > 50rem) {
+  .photo {
+    width: calc(100% / 3);
+  }
+}
+@media (width > 60rem) {
+  .photo {
+    width: 25%;
+  }
+}
+@media (width > 70rem) {
+  .photo {
+    width: 20%;
+  }
+}
+.photo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    hsl(var(--hue) 25% 95% / 2%),
+    hsl(var(--hue) 40% 60% / 2%),
+    hsl(var(--hue) 40% 60% / 2%),
+    hsl(var(--hue) 25% 10% / 8%)
+  );
+  opacity: 0.95;
+  transition: opacity 0.2s;
+  z-index: 1;
+}
+.photo img {
+  object-fit: cover;
+  flex: 1 1 auto;
+  filter: grayscale(0.05);
+  opacity: 0.9;
+  transition: all 0.2s;
+}
+.photo:hover img {
+  opacity: 1;
+  filter: grayscale(0);
+}
+.photo:hover::after {
+  opacity: 0;
+}
