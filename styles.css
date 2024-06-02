@@ -298,7 +298,7 @@ footer {
   display: flex;
   align-items: center;
 }
-@media (width > 41rem) {
+@media (width > 58rem) {
   .footer-links {
     display: flex;
     justify-content: space-evenly;
@@ -309,13 +309,13 @@ footer {
     width: 18rem;
   }
 }
-@media (width <= 41rem) {
+@media (width <= 58rem) {
   .footer-links {
     max-width: 20rem;
     margin: auto;
   }
-  .footer-link:first-child {
-    margin-bottom: 1.5rem;
+  .footer-link:nth-child(2) {
+    margin: 1.5rem auto;
   }
 }
 .icon-link {
