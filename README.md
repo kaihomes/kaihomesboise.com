@@ -21,3 +21,7 @@ To add to the portfolio, follow these steps:
    1. `<img id="feature" src="./1.jpg" alt="__NEW_TITLE__" />`
 
 And that's it! Push the changes to GitHub. And then your new portfolio page should be live in just a few seconds after you push your changes.
+
+---
+
+The website is published through Netlify: https://app.netlify.com/sites/kaihomesboise/overview
