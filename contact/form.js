@@ -35,6 +35,7 @@ form.addEventListener("submit", (e) => {
     name: getVal("name"),
     email: getVal("email"),
     phone: getVal("phone"),
+    address: getVal("address"),
     message: getVal("message"),
   };
   form.style.display = "none";
