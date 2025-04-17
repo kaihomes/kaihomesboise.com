@@ -6,5 +6,5 @@ const tempOverlay = document.getElementById("temp-overlay");
 window.addEventListener("load", () => {
   window.setTimeout(() => {
     tempOverlay.className = "hide";
-  }, 10);
+  }, 5);
 });

@@ -31,11 +31,12 @@ const successDiv = getEl("success");
 const spinnerDiv = getEl("spinner");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  const address = `${getVal("address")}, ${getVal("city")}, ${getVal("zip")}`;
   const data = {
     name: getVal("name"),
     email: getVal("email"),
     phone: getVal("phone"),
-    address: getVal("address"),
+    address,
     message: getVal("message"),
   };
   form.style.display = "none";

@@ -191,17 +191,28 @@ header {
   position: relative;
   z-index: 1;
 }
+.jumbo-hero .jumbo-hero-bg-overlay {
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 2s ease-in-out;
+  will-change: opacity;
+}
 #home-page {
-  background-image: var(--hero-gradient), url("./images/home.jpg");
+  background-image: var(--hero-gradient), url("./images/heroes/hero-1.jpg");
 }
 #about-page {
-  background-image: var(--hero-gradient), url("./images/about.jpg");
+  background-image: var(--hero-gradient), url("./images/heroes/hero-4.jpg");
 }
 #contact-page {
-  background-image: var(--hero-gradient), url("./images/contact.jpg");
+  background-image: var(--hero-gradient), url("./images/heroes/hero-2.jpg");
 }
 #portfolio-page {
-  background-image: var(--hero-gradient), url("./images/portfolio.jpg");
+  background-image: var(--hero-gradient), url("./images/heroes/hero-6.jpg");
 }
 #historic-page {
   background-image: var(--hero-gradient), url("./images/historic.jpg");
@@ -214,7 +225,8 @@ header {
   text-align: center;
   font-weight: 500;
   letter-spacing: 0.025rem;
-  text-shadow: var(--text-shadow);
+  text-shadow: var(--text-shadow), 0 0 0.75rem #0008, 0 0 1rem #0008,
+    0 0 2rem #0008, 0 0 2rem #0008;
   background: linear-gradient(
     transparent,
     hsl(var(--hero-bg) / 25%),
