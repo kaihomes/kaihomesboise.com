@@ -1,6 +1,7 @@
 .portfolio-links {
   display: flex;
   flex-wrap: wrap;
+  border: 0.125rem solid #fff;
 }
 .img-link {
   display: flex;
@@ -8,6 +9,32 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+  border: 0.25rem solid #fff;
+}
+.label-box {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+  top: calc(50% - 1rem);
+}
+.hover-text {
+  position: absolute;
+  line-height: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #fff;
+  text-shadow: 0 0 0.75rem #000, 0 0 1rem #000d, 0 0 2rem #000d;
+  margin: 0 auto;
+  background: radial-gradient(circle at center, #0006, transparent 50%);
+  user-select: none;
+  top: 200%;
+  transition: top 0.2s;
 }
 @media (width >= 36rem) {
   .img-link {
@@ -61,4 +88,7 @@
 }
 .img-link:hover::after {
   opacity: 0;
+}
+.img-link:hover .hover-text {
+  top: calc(50% - 0.75rem);
 }

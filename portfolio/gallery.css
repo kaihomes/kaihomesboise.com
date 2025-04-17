@@ -1,3 +1,35 @@
+body {
+  --gallery-bg: hsl(var(--hue) 16% 97%);
+}
+header {
+  background-color: var(--gallery-bg);
+}
+.nav-link {
+  background-color: hsl(var(--hue) 16% 99% / 90%);
+}
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #fff;
+}
+article {
+  padding: 1.5rem 1rem;
+}
+article section {
+  padding: 0.75rem 1.5rem;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 0.125rem;
+  max-width: 40rem;
+  border: 1px solid hsl(var(--hs) 96% / 75%);
+  box-shadow: var(--box-shadow);
+}
+h1 {
+  text-transform: none;
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin: 0.5rem 0;
+}
 .feature-bg {
   background: radial-gradient(#555d, #111e);
   position: relative;
@@ -44,33 +76,71 @@
 #next:hover {
   background: linear-gradient(to right, transparent, hsl(0 0 0 / 30%));
 }
+.gallery-slideshow {
+  position: relative;
+  --photo-width: 38vw;
+}
+@media (width > 36rem) {
+  .gallery-slideshow {
+    --photo-width: 12rem;
+  }
+}
 #gallery {
-  margin: 0.25rem 0 1.5rem;
+  margin: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  border-top: 0.125rem solid #fff;
+  border-bottom: 0.125rem solid #fff;
+  overflow-x: scroll;
+  position: relative;
+  width: 100%;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  min-height: calc(var(--photo-width) * (9 / 16));
+  /* box-shadow: inset 0.5rem 0 0.25rem 0.125rem #000,
+    inset -0.5rem 0 0.25rem 0.125rem #000, inset 0.75rem 0 0.25rem #000,
+    inset -0.75rem 0 0.25rem #000; */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 5%,
+    black 95%,
+    transparent 100%
+  );
+}
+@media (width > 120rem) {
+  #gallery {
+    justify-content: center;
+  }
+}
+#gallery::-webkit-scrollbar {
+  height: 0.5rem;
+}
+#gallery::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--hero-bg));
+  border-radius: 0.375rem;
 }
 .photo {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 50%;
+  flex: 0 0 var(--photo-width);
   overflow: hidden;
   cursor: pointer;
+  border: 0.125rem solid #fff;
 }
-@media (width > 50rem) {
-  .photo {
-    width: calc(100% / 3);
-  }
+.photo:first-child {
+  border-left-width: 0.25rem;
 }
-@media (width > 60rem) {
-  .photo {
-    width: 25%;
-  }
-}
-@media (width > 70rem) {
-  .photo {
-    width: 20%;
-  }
+.photo:last-child {
+  border-right-width: 0.25rem;
 }
 .photo::after {
   content: "";
