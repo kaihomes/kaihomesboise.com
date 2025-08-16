@@ -1,57 +1,70 @@
 :root {
-  --hue: 216deg;
-  --sat: 16%;
-  --hs: var(--hue) var(--sat);
-  --bg-hsl: var(--hs) 98%;
-  --fg-hsl: var(--hs) 8%;
+  --hue: 100deg;
+  --hs: 100deg 26%;
+  --blue-hue: 190deg;
+  --bg-hsl: var(--hue) 5% 99%;
+  --fg-hsl: var(--hue) 5% 5%;
   --bg: hsl(var(--bg-hsl));
   --fg: hsl(var(--fg-hsl));
   --font-family: ui-sans-serif, system-ui, -apple-system, "BlinkMacSystemFont",
     "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", sans-serif;
-  --hero-bg: var(--hue) 25% 25%;
-  --hero-fg: var(--hue) 25% 90%;
+  --hero-bg: var(--blue-hue) 25% 25%;
+  --green-theme-hex: #466039;
+  --green-theme-hsl: var(--hs) 30%;
 
   --hero-gradient: linear-gradient(
     hsl(var(--hero-bg) / 8%),
     hsl(var(--hero-bg) / 16%)
   );
+  --hero-grad-w-transparency: linear-gradient(
+    transparent,
+    hsl(var(--hero-bg) / 15%),
+    hsl(var(--hero-bg) / 25%)
+  );
+  --green-gradient: linear-gradient(var(--green-theme-hex), hsl(75deg 24% 60%));
+  --dark-green-gradient: linear-gradient(
+    var(--green-theme-hex),
+    hsl(88deg 24% 34%)
+  );
+  --nav-menu-gradient: linear-gradient(hsl(105deg 29% 29%), hsl(95deg 25% 35%));
+  --temp-overlay: var(--green-gradient);
 
   --shadow-size: 0 0 0.25rem 0.25rem;
   --border-s: 0.125rem solid;
-  --border-c: var(--hue) 75% 25%;
+  --border-c: var(--green-theme-hsl);
+  --border: var(--border-s) hsl(var(--border-c) / 90%);
   --btn-border: var(--border-s) hsl(var(--border-c) / 95%);
-  --btn-hover-border-c: hsl(var(--hue) 95% 25% / 99%);
-  --btn-focus-border-c: hsl(var(--hue) 95% 25% / 94%);
-  --btn-color: hsl(var(--hue) 60% 15%);
-  --btn-bg: hsl(var(--hue) 60% 75% / 20%);
-  --btn-hover-bg: hsl(var(--hue) 75% 70% / 25%);
-  --btn-focus-bg: hsl(var(--hue) 85% 40% / 15%);
-  --shadow-hsl: var(--hue) 75% 5%;
+  --btn-hover-border-c: hsl(var(--hue) 28% 26% / 99%);
+  --btn-focus-border-c: hsl(var(--hue) 28% 26% / 94%);
+  --btn-color: hsl(var(--hs) 15%);
+  --btn-bg: hsl(var(--hs) 78% / 20%);
+  --btn-hover-bg: hsl(var(--hs) 75% / 25%);
+  --btn-focus-bg: hsl(var(--hs) 50% / 15%);
+  --shadow-hsl: var(--hs) 5%;
   --btn-shadow: var(--shadow-size) hsl(var(--shadow-hsl) / 4%);
   --btn-hover-shadow: var(--shadow-size) hsl(var(--shadow-hsl) / 6%);
   --btn-opacity: 0.96;
 
-  --box-shadow: var(--shadow-size) hsl(var(--shadow-hsl) / 8%);
-  --text-shadow: 0 0 0.75rem hsl(var(--hs) 10% / 75%);
+  --box-shadow: var(--shadow-size) hsl(var(--shadow-hsl) / 6%);
+  --box-shadow-lite: var(--shadow-size) hsl(var(--shadow-hsl) / 2%);
+  --text-shadow: 0 0 0.75rem hsl(var(--hue) 5% 10% / 75%);
   --text-shadow-white: 0 0 0.5rem #fff;
-  --white-transparent-bg: hsl(var(--hs) 99% / 85%);
+  --white-transparent-bg: hsl(var(--hue) 5% 99% / 85%);
 
-  --dark-border-c: var(--hue) 20% 75%;
+  --dark-border-c: var(--hs) 80%;
   --dark-btn-border: var(--border-s) hsl(var(--dark-border-c) / 95%);
   --dark-btn-hover-border-c: hsl(var(--dark-border-c) / 99%);
   --dark-btn-focus-border-c: hsl(var(--dark-border-c) / 94%);
-  --dark-btn-color: hsl(var(--hue) 25% 92%);
-  --dark-btn-bg: hsl(var(--hue) 25% 40% / 20%);
-  --dark-btn-hover-bg: hsl(var(--hue) 25% 64% / 22%);
-  --dark-btn-focus-bg: hsl(var(--hue) 25% 40% / 15%);
+  --dark-btn-color: hsl(var(--hs) 94%);
+  --dark-btn-bg: hsl(var(--hs) 35% / 18%);
+  --dark-btn-hover-bg: hsl(var(--hs) 60% / 22%);
+  --dark-btn-focus-bg: hsl(var(--hs) 35% / 15%);
   --dark-shadow-size: 0 0 0.625rem 0.625rem;
-  --dark-shadow-hsl: var(--hue) 20% 85%;
+  --dark-shadow-hsl: var(--hs) 85%;
   --dark-btn-shadow: var(--dark-shadow-size) hsl(var(--dark-shadow-hsl) / 5%);
   --dark-btn-hover-shadow: var(--dark-shadow-size)
     hsl(var(--dark-shadow-hsl) / 10%);
   --dark-btn-opacity: 0.96;
-
-  --logo-color: hsl(0 64% 40%);
 }
 
 *,
@@ -88,6 +101,10 @@ svg {
   margin: 0;
   max-width: 100%;
   height: auto;
+}
+rect {
+  transform-origin: center;
+  transform-box: fill-box;
 }
 button,
 input,
@@ -167,11 +184,7 @@ textarea {
 
 /* #region Top header, nav, and hero */
 #temp-overlay {
-  background: linear-gradient(
-    to bottom,
-    hsl(var(--hue) 28% 64%),
-    hsl(var(--hue) 50% 10%)
-  );
+  background: var(--temp-overlay);
   position: absolute;
   z-index: 0;
   inset: 0;
@@ -227,11 +240,7 @@ header {
   letter-spacing: 0.025rem;
   text-shadow: var(--text-shadow), 0 0 0.75rem #0008, 0 0 1rem #0008,
     0 0 2rem #0008, 0 0 2rem #0008;
-  background: linear-gradient(
-    transparent,
-    hsl(var(--hero-bg) / 25%),
-    hsl(var(--hero-bg) / 30%)
-  );
+  background: var(--hero-grad-w-transparency);
 }
 h1 {
   line-height: 1.25;
@@ -244,9 +253,9 @@ h1 {
   font-size: 1.25rem;
   letter-spacing: 0.05rem;
 }
-nav {
+header nav {
   position: relative;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -259,12 +268,10 @@ nav {
 }
 .logo-link {
   display: block;
-  width: 6rem;
+  width: 4rem;
 }
 .logo {
   width: 100%;
-  color: var(--logo-color);
-  fill: var(--logo-color);
 }
 .nav-links {
   display: flex;
@@ -273,7 +280,7 @@ nav {
 .nav-link {
   display: block;
   font-size: 1.125rem;
-  padding: 1.25rem 0.625rem;
+  padding: 1rem 0.625rem;
   margin: 0 0 0 0.125rem;
   font-weight: 300;
   line-height: 1;
@@ -300,11 +307,167 @@ nav {
 }
 /* #endregion */
 
+/* #region Nav Menu */
+#menu-btn {
+  border-radius: 0.25rem;
+  border-width: 1px;
+  background-color: hsl(var(--bg-hsl) / 16%);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0;
+}
+#menu-btn span {
+  flex: 0 0 auto;
+}
+#menu-btn svg {
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+#close-menu-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.125rem;
+  margin: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+#close-menu-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+#close-menu-btn:hover,
+#close-menu-btn:focus {
+  background: hsl(var(--bg-hsl) / 5%);
+  transform: scale(1.1);
+}
+#nav-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: var(--nav-menu-gradient);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  pointer-events: none;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+#nav-menu.opened {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+#nav-menu:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -0.25px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 0.25px;
+}
+#nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+}
+@keyframes fadeAndSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#nav-menu li {
+  opacity: 0;
+  transform: translateY(0.5rem);
+  will-change: opacity, transform;
+  --i: 0;
+}
+/* set var --i */
+#nav-menu li:nth-child(1) {
+  --i: 1;
+}
+#nav-menu li:nth-child(2) {
+  --i: 2;
+}
+#nav-menu li:nth-child(3) {
+  --i: 3;
+}
+#nav-menu li:nth-child(4) {
+  --i: 4;
+}
+#nav-menu li:nth-child(5) {
+  --i: 5;
+}
+#nav-menu.opened li {
+  animation: fadeAndSlideUp 250ms ease-in-out forwards;
+  animation-delay: calc(50ms * var(--i));
+}
+#nav-menu li a {
+  display: inline-block;
+  text-decoration-color: transparent;
+  transform: scale(1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    text-decoration-color 0.25s ease;
+  padding: 0.25rem 0.5rem;
+}
+#nav-menu li a:hover,
+#nav-menu li a:focus {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  transform: scale(1.05);
+}
+@media (prefers-reduced-motion: reduce) {
+  #nav-menu {
+    transform: none;
+  }
+  #nav-menu li {
+    transform: none;
+    animation: none;
+  }
+}
+/* #endregion */
+
 /* #region Footer */
 footer {
   text-align: center;
   padding: 4rem 1rem;
-  background-color: hsl(var(--hero-bg));
+  background: var(--dark-green-gradient);
 }
 .footer-link {
   display: flex;
@@ -364,14 +527,14 @@ footer {
   position: relative;
   z-index: 2;
   background: linear-gradient(
-    to bottom right,
-    hsl(var(--hue) 50% 96% / 95%),
-    hsl(var(--hue) 50% 92% / 95%)
+    hsl(var(--blue-hue) 40% 97% / 97%),
+    hsl(var(--hue) 25% 95% / 96%)
   );
   padding: 2.5rem 3rem;
   margin: -2rem auto 2rem;
   max-width: 38rem;
-  border: 1px solid hsl(var(--hs) 96% / 75%);
+  border: 1px solid hsl(var(--hue) 5% 96% / 75%);
+  border-radius: 0.125rem;
   box-shadow: var(--box-shadow);
 }
 .intro p {
@@ -385,7 +548,7 @@ h3 {
   line-height: 1;
 }
 .backdrop {
-  background-color: hsl(var(--hue) 15% 96% / 95%);
+  background-color: hsl(var(--hue) 5% 98% / 95%);
 }
 .center {
   text-align: center;
@@ -400,13 +563,13 @@ h3 {
 @media (width > 25rem) {
   .nav-link {
     letter-spacing: 0.025rem;
-    padding: 1.25rem 0.75rem;
+    padding: 1rem 0.75rem;
   }
 }
 @media (width > 32rem) {
   .nav-link {
     letter-spacing: 0.05rem;
-    padding: 1.25rem 1rem;
+    padding: 1rem 1rem;
     margin: 0 0 0 0.25rem;
   }
 }
@@ -454,7 +617,7 @@ h3 {
     font-size: 1rem;
     letter-spacing: 0.025rem;
   }
-  nav {
+  header nav {
     padding: 0.25rem 0.5rem;
   }
   .logo-link {
@@ -472,5 +635,15 @@ h3 {
 @media (width < 21rem) {
   .nav-link {
     font-size: 1rem;
+  }
+}
+@media (27.75rem < width < 32.5rem) {
+  #tagline {
+    font-size: 1rem;
+  }
+}
+@media (width > 27.75rem) {
+  #tagline #hero-br {
+    display: none;
   }
 }

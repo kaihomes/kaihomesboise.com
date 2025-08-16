@@ -66,10 +66,10 @@
       hsl(var(--hero-bg) / 20%)
     ),
     radial-gradient(
-      hsl(var(--hue) 25% 95% / 10%),
-      hsl(var(--hue) 40% 60% / 10%),
-      hsl(var(--hue) 40% 60% / 10%),
-      hsl(var(--hue) 25% 10% / 20%)
+      hsl(var(--blue-hue) 25% 95% / 10%),
+      hsl(var(--blue-hue) 40% 60% / 10%),
+      hsl(var(--blue-hue) 40% 60% / 10%),
+      hsl(var(--blue-hue) 25% 10% / 20%)
     );
   opacity: 0.9;
   transition: opacity 0.2s;

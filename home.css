@@ -14,10 +14,10 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    hsl(var(--hue) 25% 95% / 10%),
-    hsl(var(--hue) 40% 60% / 10%),
-    hsl(var(--hue) 40% 60% / 10%),
-    hsl(var(--hue) 25% 10% / 50%)
+    hsl(var(--blue-hue) 25% 95% / 10%),
+    hsl(var(--blue-hue) 40% 60% / 10%),
+    hsl(var(--blue-hue) 40% 60% / 10%),
+    hsl(var(--blue-hue) 25% 10% / 50%)
   );
   z-index: 1;
 }

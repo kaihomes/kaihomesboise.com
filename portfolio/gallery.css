@@ -20,7 +20,7 @@ article section {
   background-color: #fff;
   border-radius: 0.125rem;
   max-width: 40rem;
-  border: 1px solid hsl(var(--hs) 96% / 75%);
+  border: 1px solid hsl(var(--hue) 5% 96% / 75%);
   box-shadow: var(--box-shadow);
 }
 h1 {
@@ -124,7 +124,7 @@ h1 {
   height: 0.5rem;
 }
 #gallery::-webkit-scrollbar-thumb {
-  background-color: hsl(var(--hero-bg));
+  background-color: var(--green-theme-hex);
   border-radius: 0.375rem;
 }
 .photo {

@@ -1,14 +1,39 @@
 <?xml version="1.0"?>
-<svg width="192" height="192" viewBox="0 0 192 192"
-  xmlns="http://www.w3.org/2000/svg"
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"
   xmlns:svg="http://www.w3.org/2000/svg">
-  <title>KAI LLC</title>
-  <g>
-    <rect fill="#a72525" width="192" height="192" x="0" y="0" />
-    <text fill="#fff" color="#fff" font-family="sans-serif" font-size="104" font-weight="bold" x="9" y="133" textLength="173">KAI</text>
-    <g stroke="#fff" stroke-width="16">
-      <line x1="16" x2="176" y1="28" y2="28" />
-      <line x1="16" x2="176" y1="164" y2="164" />
+  <style>
+    rect {
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+  </style>
+  <title>KAI</title>
+  <g id="svg_layer" font-size="16">
+    <rect id="svg_bg" fill="#466039" width="12rem" height="12rem" x="0" y="0" />
+    <g id="svg_lines" stroke="#fff" stroke-width="1rem">
+      <line x1="1rem" x2="11rem" y1="1.75rem" y2="1.75rem" />
+      <line x1="1rem" x2="11rem" y1="10.25rem" y2="10.25rem" />
     </g>
+    <g id="svg_kai" fill="#fff">
+      <g id="svg_k">
+        <rect height="5rem" width="1rem" x="1rem" y="3.5rem" />
+        <g>
+          <rect height="2.5rem" width="1.25rem" x="2.75rem" y="3.5rem" transform="skewX(-40)" />
+          <rect height="2.5rem" width="1.25rem" x="2.75rem" y="6rem" transform="skewX(40)" />
+        </g>
+      </g>
+      <g id="svg_a">
+        <g>
+          <rect height="5rem" width="17" x="6rem" y="3.5rem" transform="skewX(-20)" />
+          <rect height="5rem" width="17" x="7.825rem" y="3.5rem" transform="skewX(20)" />
+        </g>
+        <rect height="15" width="2.75rem" x="6rem" y="6.5rem" />
+      </g>
+      <rect id="svg_i" height="5rem" width="1rem" x="10rem" y="3.5rem" />
+    </g>
+    <text id="svg_kai-text" fill="#fff" color="#fff" font-family="sans-serif" font-size="6.5rem" font-weight="700"
+      x="0.5rem" y="8.5rem" opacity="0" letter-spacing="-0.125rem">
+      KAI
+    </text>
   </g>
 </svg>
