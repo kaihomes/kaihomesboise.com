@@ -1,0 +1,147 @@
+.main-content {
+  padding: 1rem 0;
+}
+.segment {
+  padding: 1rem 0;
+}
+.segment .inner {
+  padding: 1rem;
+  margin: auto;
+  max-width: 46rem;
+}
+.segment h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: var(--border);
+  padding-bottom: 0.5rem;
+  color: hsl(var(--hue) 40% 10%);
+}
+.segment strong {
+  font-weight: 500;
+  color: #000;
+}
+.steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto 1rem;
+}
+.steps-line {
+  position: absolute;
+  left: 29px;
+  top: 2.25rem;
+  bottom: 8rem;
+  width: 0.125rem;
+  background: linear-gradient(hsl(var(--hue) 52% 32%), hsl(var(--hue) 32% 32%));
+  z-index: 0;
+}
+@media (width > 25rem) {
+  .steps-line {
+    bottom: 7rem;
+  }
+}
+@media (width > 28rem) {
+  .steps-line {
+    bottom: 5rem;
+  }
+}
+.step {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding-left: 0.125rem;
+  z-index: 1;
+}
+@media (width > 32rem) {
+  .step {
+    align-items: center;
+  }
+  .steps-line {
+    bottom: 2.25rem;
+  }
+}
+.step-num {
+  flex: 0 0 3.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  background-color: #fff;
+  border: 1.5px solid hsl(var(--hue) 32% 32%);
+  box-shadow: var(--box-shadow-lite);
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.step-text h4 {
+  font-size: 1.125rem;
+  color: hsl(var(--hue) 30% 15%);
+}
+.step-text {
+  opacity: 0.9;
+}
+.step:hover .step-text {
+  opacity: 1;
+}
+.step:hover .step-text h4 {
+  color: hsl(var(--hue) 20% 10%);
+}
+.step:hover .step-num {
+  border-width: 0.125rem;
+  font-weight: 500;
+}
+.step-text h4,
+.step-text p {
+  margin: 0;
+}
+.lead {
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: -0.0125rem;
+  line-height: 1;
+  max-width: 24rem;
+  margin: 2rem auto 1.5rem;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  color: #000;
+  border-color: hsl(var(--hue) 50% 30% / 20%);
+  border-style: solid;
+  border-left-width: 0.125rem;
+  border-right-width: 0.125rem;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  overflow: hidden;
+  background: linear-gradient(
+    160deg,
+    hsl(var(--hue) 80% 50% / 5%),
+    hsl(var(--hue) 80% 30% / 10%)
+  );
+}
+@media (width > 24rem) {
+  .lead {
+    font-size: 1.125rem;
+  }
+}
+.lead .amp {
+  color: hsl(var(--hue) 50% 30% / 40%);
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin: 0;
+  line-height: 1.5;
+}
+@media (width < 22.5rem) {
+  .lead {
+    padding: 2rem 0.5rem;
+  }
+}
+@media (width < 21.25rem) {
+  .lead {
+    padding: 2rem 0.125rem;
+    font-size: 15px;
+    letter-spacing: normal;
+  }
+}

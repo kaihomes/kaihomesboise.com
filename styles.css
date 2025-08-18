@@ -221,10 +221,12 @@ header {
 #about-page {
   background-image: var(--hero-gradient), url("./images/heroes/hero-4.jpg");
 }
-#contact-page {
+#contact-page,
+#team-page {
   background-image: var(--hero-gradient), url("./images/heroes/hero-2.jpg");
 }
-#portfolio-page {
+#portfolio-page,
+#process-page {
   background-image: var(--hero-gradient), url("./images/heroes/hero-6.jpg");
 }
 #historic-page {
@@ -253,6 +255,16 @@ h1 {
   font-size: 1.25rem;
   letter-spacing: 0.05rem;
 }
+/* TODO: top nav bar */
+/* 
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+right: 0;
+background: #fff;
+z-index: 999;
+*/
 header nav {
   position: relative;
   padding: 0.25rem 1rem;
