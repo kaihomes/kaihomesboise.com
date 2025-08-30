@@ -269,7 +269,7 @@
   }
 }
 .kai-dog {
-  max-width: 32rem;
+  max-width: 35rem;
   padding: 1.5rem 1rem;
   margin: 3rem auto 0;
   gap: 1.75rem;
@@ -281,7 +281,6 @@
 }
 .kai-dog p {
   margin: 0 auto 1rem;
-  max-width: 26rem;
 }
 .kai-dog-img {
   width: 12rem;
@@ -295,7 +294,7 @@
 }
 @media (width > 45rem) {
   .kai-dog {
-    max-width: 44rem;
+    max-width: 49rem;
     flex-direction: row;
   }
 }
