@@ -6,8 +6,32 @@
   margin: 0 auto;
   max-width: 56rem;
 }
+.team-separator {
+  border: none;
+  height: 0.5rem;
+  background: linear-gradient(
+    110deg,
+    #fff 0%,
+    #fff 1%,
+    hsl(80 6% 36%) 1%,
+    hsl(80 6% 36%) 9%,
+    #fff 9%,
+    #fff 10%,
+    hsl(84 36% 58%) 10%,
+    hsl(84 36% 58%) 49%,
+    #fff 49%,
+    #fff 50%,
+    hsl(42 35% 80%) 50%,
+    hsl(42 35% 80%) 79%,
+    #fff 79%,
+    #fff 80%,
+    hsl(40 36% 64%) 80%,
+    hsl(40 36% 64%) 99%,
+    #fff 99%,
+    #fff 100%
+  );
+}
 .team-member {
-  border-bottom: 1px solid #ddd;
   padding: 3.25rem 0;
   display: flex;
   flex-direction: column;
@@ -30,10 +54,31 @@
   margin: 0 0 0.5rem;
   font-size: 15px;
 }
+.bio .name-and-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 0.5rem;
+}
+.bio .icons {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.bio .icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(150deg, hsl(100deg 34% 34%), hsl(110deg 40% 24%));
+  border-radius: 100%;
+}
 .bio h3 {
   font-size: 2rem;
   font-weight: 700;
-  margin: 0 0 0.5rem;
+  margin: 0;
 }
 .bio h4 {
   font-size: 1.125rem;
@@ -47,9 +92,6 @@
 }
 .team-member:first-child {
   padding-top: 0;
-}
-.team-member:last-child {
-  border-bottom: none;
 }
 @media (width > 40rem) {
   .team-member {
