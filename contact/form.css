@@ -1,8 +1,13 @@
-main {
-  padding: 3rem 0.875rem;
-  background-color: hsl(var(--hue) 30% 94% / 95%);
+#contact {
+  background: linear-gradient(
+    hsl(var(--hue) 30% 99% / 95%),
+    hsl(var(--hue) 30% 94% / 95%)
+  );
 }
-section {
+.page-inner {
+  padding: 1rem 0.875rem 3rem;
+}
+.page-inner section {
   padding: 0.125rem 1rem 0.25rem;
   max-width: 40rem;
   margin: auto;
@@ -12,10 +17,10 @@ section {
   box-shadow: var(--box-shadow);
 }
 @media (width > 31rem) {
-  main {
-    padding: 3rem 1rem;
+  .page-inner {
+    padding: 1rem 1rem 3rem;
   }
-  section {
+  .page-inner section {
     padding: 1.5rem 3rem;
     border-radius: 1rem;
   }
