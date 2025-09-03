@@ -6,31 +6,6 @@
   margin: 0 auto;
   max-width: 56rem;
 }
-.team-separator {
-  border: none;
-  height: 0.5rem;
-  background: linear-gradient(
-    110deg,
-    #fff 0%,
-    #fff 1%,
-    hsl(80 6% 36%) 1%,
-    hsl(80 6% 36%) 9%,
-    #fff 9%,
-    #fff 10%,
-    hsl(84 36% 58%) 10%,
-    hsl(84 36% 58%) 49%,
-    #fff 49%,
-    #fff 50%,
-    hsl(42 35% 80%) 50%,
-    hsl(42 35% 80%) 79%,
-    #fff 79%,
-    #fff 80%,
-    hsl(40 36% 64%) 80%,
-    hsl(40 36% 64%) 99%,
-    #fff 99%,
-    #fff 100%
-  );
-}
 .team-member {
   padding: 3.25rem 0;
   display: flex;

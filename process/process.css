@@ -145,3 +145,7 @@
     letter-spacing: normal;
   }
 }
+#process .separator {
+  max-width: 44rem;
+  margin: 1.5rem auto;
+}

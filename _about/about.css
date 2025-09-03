@@ -383,3 +383,10 @@
     padding: 1.375rem 1.75rem;
   }
 }
+.about-kai .inner .center .btn.light-btn {
+  margin-bottom: 0;
+}
+.about-kai .separator {
+  max-width: 46rem;
+  margin: 2.5rem auto 1.75rem;
+}
