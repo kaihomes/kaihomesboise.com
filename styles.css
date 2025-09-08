@@ -50,6 +50,7 @@
   --text-shadow: 0 0 0.75rem hsl(var(--hue) 5% 10% / 75%);
   --text-shadow-white: 0 0 0.5rem #fff;
   --white-transparent-bg: hsl(var(--hue) 5% 99% / 85%);
+  --green-shadow: hsl(var(--hs) 20% / 50%);
 
   --dark-border-c: var(--hs) 80%;
   --dark-btn-border: var(--border-s) hsl(var(--dark-border-c) / 95%);
@@ -265,8 +266,9 @@ header {
   text-align: center;
   font-weight: 500;
   letter-spacing: 0.025rem;
-  text-shadow: var(--text-shadow), 0 0 0.75rem #0008, 0 0 1rem #0008,
-    0 0 2rem #0008, 0 0 2rem #0008;
+  text-shadow: var(--text-shadow), 0 0 0.75rem var(--green-shadow),
+    0 0 1rem var(--green-shadow), 0 0 2rem var(--green-shadow),
+    0 0 2rem var(--green-shadow);
   background: var(--hero-grad-w-transparency);
 }
 h1 {

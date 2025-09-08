@@ -1,3 +1,6 @@
+#process-page .hero {
+  padding: 18% 0;
+}
 .main-content {
   padding: 1rem 0;
 }
@@ -71,11 +74,11 @@
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 100%;
-  background-color: #fff;
-  border: 1.5px solid hsl(var(--hue) 32% 32%);
+  background: linear-gradient(105deg, hsl(100deg 34% 34%), hsl(110deg 40% 24%));
   box-shadow: var(--box-shadow-lite);
   font-size: 1.25rem;
   font-weight: 300;
+  color: #fff;
 }
 .step-text h4 {
   font-size: 1.125rem;
@@ -91,27 +94,26 @@
   color: hsl(var(--hue) 20% 10%);
 }
 .step:hover .step-num {
-  border-width: 0.125rem;
+  background: linear-gradient(105deg, hsl(100deg 40% 40%), hsl(110deg 40% 34%));
   font-weight: 500;
 }
 .step-text h4,
 .step-text p {
   margin: 0;
 }
-.lead {
+#process .lead {
   font-weight: 300;
   text-align: center;
-  letter-spacing: -0.0125rem;
-  line-height: 1;
+  line-height: 1.25;
   max-width: 24rem;
   margin: 2rem auto 1.5rem;
-  padding: 2rem 1rem;
+  padding: 2rem 0.5rem;
   border-radius: 0.5rem;
   color: #000;
   border-color: hsl(var(--hue) 50% 30% / 20%);
   border-style: solid;
-  border-left-width: 0.125rem;
-  border-right-width: 0.125rem;
+  border-left-width: 0.25rem;
+  border-right-width: 0.25rem;
   border-top-width: 0;
   border-bottom-width: 0;
   overflow: hidden;
@@ -121,8 +123,8 @@
     hsl(var(--hue) 80% 30% / 10%)
   );
 }
-@media (width > 24rem) {
-  .lead {
+@media (width > 21rem) {
+  #process .lead {
     font-size: 1.125rem;
   }
 }
@@ -132,18 +134,6 @@
   font-size: 1.75rem;
   margin: 0;
   line-height: 1.5;
-}
-@media (width < 22.5rem) {
-  .lead {
-    padding: 2rem 0.5rem;
-  }
-}
-@media (width < 21.25rem) {
-  .lead {
-    padding: 2rem 0.125rem;
-    font-size: 15px;
-    letter-spacing: normal;
-  }
 }
 #process .separator {
   max-width: 44rem;
