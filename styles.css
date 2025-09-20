@@ -47,6 +47,7 @@
 
   --box-shadow: var(--shadow-size) hsl(var(--shadow-hsl) / 6%);
   --box-shadow-lite: var(--shadow-size) hsl(var(--shadow-hsl) / 2%);
+  --box-shadow-mid: var(--shadow-size) hsl(var(--shadow-hsl) / 4%);
   --text-shadow: 0 0 0.75rem hsl(var(--hue) 5% 10% / 75%);
   --text-shadow-white: 0 0 0.5rem #fff;
   --white-transparent-bg: hsl(var(--hue) 5% 99% / 85%);
@@ -241,7 +242,8 @@ header {
   transition: opacity 2s ease-in-out;
   will-change: opacity;
 }
-#home-page {
+#home-page,
+#services-page {
   background-image: var(--hero-gradient), url("./images/heroes/hero-1.jpg");
 }
 #about-page {
