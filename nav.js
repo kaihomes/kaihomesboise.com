@@ -1,7 +1,9 @@
+const _getEl = (id) => document.getElementById(id);
+
 document.addEventListener("DOMContentLoaded", () => {
-  const showMenuBtn = document.getElementById("menu-btn");
-  const hideMenuBtn = document.getElementById("close-menu-btn");
-  const menu = document.getElementById("nav-menu");
+  const showMenuBtn = _getEl("menu-btn");
+  const hideMenuBtn = _getEl("close-menu-btn");
+  const menu = _getEl("nav-menu");
 
   showMenuBtn.addEventListener("click", () => {
     menu.setAttribute("aria-hidden", "false");
@@ -20,4 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
       closeMenu();
     }
   });
+
+  const mainEl = document.querySelector("main");
+  const stickyPoint = mainEl.getBoundingClientRect().top + window.scrollY + 96;
+  const nav1 = _getEl("sticky-nav");
+  const nav2 = _getEl("top-nav");
+  function checkScroll() {
+    const curr = window.scrollY;
+    if (curr > stickyPoint) {
+      nav1.classList.add("sticky");
+      nav2.classList.add("sticky");
+    } else {
+      nav1.classList.remove("sticky");
+      nav2.classList.remove("sticky");
+    }
+  }
+  window.addEventListener("scroll", checkScroll);
+  checkScroll();
 });

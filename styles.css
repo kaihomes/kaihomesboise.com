@@ -1,14 +1,14 @@
 :root {
   --hue: 100deg;
   --hs: 100deg 26%;
-  --blue-hue: 190deg;
+  --blue-hue: 160deg;
   --bg-hsl: var(--hue) 5% 99%;
   --fg-hsl: var(--hue) 5% 5%;
   --bg: hsl(var(--bg-hsl));
   --fg: hsl(var(--fg-hsl));
   --font-family: ui-sans-serif, system-ui, -apple-system, "BlinkMacSystemFont",
     "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", sans-serif;
-  --hero-bg: var(--blue-hue) 25% 25%;
+  --hero-bg: 130deg 25% 25%;
   --green-theme-hex: #466039;
   --green-theme-hsl: var(--hs) 30%;
 
@@ -48,6 +48,7 @@
   --box-shadow: var(--shadow-size) hsl(var(--shadow-hsl) / 6%);
   --box-shadow-lite: var(--shadow-size) hsl(var(--shadow-hsl) / 2%);
   --box-shadow-mid: var(--shadow-size) hsl(var(--shadow-hsl) / 4%);
+  --box-shadow-strong: var(--shadow-size) hsl(var(--shadow-hsl) / 12%);
   --text-shadow: 0 0 0.75rem hsl(var(--hue) 5% 10% / 75%);
   --text-shadow-white: 0 0 0.5rem #fff;
   --white-transparent-bg: hsl(var(--hue) 5% 99% / 85%);
@@ -84,6 +85,10 @@ body {
   color: var(--fg);
   line-height: inherit;
   margin: 0;
+}
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 p {
@@ -284,28 +289,39 @@ h1 {
   font-size: 1.25rem;
   letter-spacing: 0.05rem;
 }
-/* TODO: top nav bar */
-/* 
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-right: 0;
-background: #fff;
-z-index: 999;
-*/
-header nav {
-  position: relative;
-  padding: 0.25rem 1rem;
-  display: flex;
+/* Nav Bars */
+#top-nav,
+#sticky-nav {
+  position: static;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(
-    to right,
-    transparent,
-    hsl(var(--bg-hsl) / 60%),
-    hsl(var(--bg-hsl) / 80%)
-  );
+  box-shadow: var(--box-shadow-mid);
+  z-index: 999;
+  top: -3.5rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  transition: top 0.25s ease-in-out;
+}
+/* Sticky Nav */
+#sticky-nav {
+  background-color: #fff;
+  display: flex;
+  padding: 0.5rem;
+}
+/* Top Nav */
+#top-nav {
+  background: #fff;
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  display: none;
+}
+#sticky-nav.sticky,
+#top-nav.sticky {
+  top: 0;
+  position: sticky;
+  z-index: 9000;
+  box-shadow: var(--box-shadow-strong);
+  border-bottom: 1px solid hsl(var(--hue) 10% 10% / 25%);
 }
 .logo-link {
   display: block;
@@ -317,29 +333,162 @@ header nav {
 .nav-links {
   display: flex;
   align-items: center;
+  gap: 0;
+  padding-left: 0.5rem;
 }
 .nav-link {
   display: block;
-  font-size: 1.125rem;
-  padding: 1rem 0.625rem;
-  margin: 0 0 0 0.125rem;
+  font-size: 1rem;
+  padding: 1rem 0.375rem;
+  margin: 0;
   font-weight: 300;
   line-height: 1;
   text-align: center;
   border-radius: 0.5rem;
-  background-color: hsl(var(--bg-hsl) / 16%);
-  text-shadow: var(--text-shadow-white);
+  background-color: hsl(var(--hs) 78% / 0%);
   transition: background-color 0.2s;
+}
+@media (width > 21rem) {
+  #sticky-nav {
+    padding: 0.5rem 0.75rem;
+  }
+}
+@media (width > 26rem) {
+  #sticky-nav {
+    padding: 0.5rem 1.25rem;
+  }
+}
+@media (width > 27rem) {
+  #sticky-nav {
+    padding: 0.5rem 1.5rem;
+  }
+}
+@media (width > 28rem) {
+  #sticky-nav {
+    padding: 0.5rem 1.75rem;
+  }
+}
+@media (width >= 30rem) {
+  #top-nav {
+    display: flex;
+  }
+  #sticky-nav {
+    display: none;
+  }
+}
+@media (width >= 31.5rem) {
+  #top-nav {
+    padding: 0.25rem 0.5rem;
+  }
+  .nav-links {
+    gap: 1px;
+  }
+}
+@media (width > 31.5rem) {
+  #top-nav,
+  #sticky-nav {
+    padding: 0.25rem 1rem;
+  }
+}
+@media (width > 33.5rem) {
+  .nav-link {
+    font-size: 1.125rem;
+  }
+}
+@media (width > 35rem) {
+  .nav-link {
+    padding: 1rem 0.5rem;
+  }
+}
+@media (width > 36.5rem) {
+  .nav-link {
+    letter-spacing: 0.025rem;
+  }
+}
+@media (width > 37rem) {
+  .nav-links {
+    gap: 0.25rem;
+  }
+}
+@media (width > 39rem) {
+  .nav-link {
+    padding: 1rem 0.625rem;
+  }
+}
+@media (width < 43.25rem) {
+  .hide-sm {
+    display: none;
+  }
+}
+@media (width > 45rem) {
+  .nav-link {
+    padding: 1rem 0.75rem;
+  }
+}
+@media (width > 46rem) {
+  .nav-link {
+    letter-spacing: 0.05rem;
+  }
+}
+@media (width >= 48rem) {
+  #top-nav,
+  #sticky-nav {
+    padding: 0.375rem 1.25rem;
+  }
+}
+@media (width >= 50rem) {
+  .nav-link {
+    letter-spacing: 0.075rem;
+  }
+}
+@media (width > 52rem) {
+  .nav-link {
+    padding: 1rem;
+  }
+}
+@media (width > 55rem) {
+  .nav-link {
+    padding: 1rem 1.125rem;
+  }
+}
+@media (width > 58rem) {
+  .nav-links {
+    gap: 0.375rem;
+  }
+  .nav-link {
+    font-weight: 400;
+  }
+}
+@media (width > 59rem) {
+  .nav-links {
+    padding-right: 0.25rem;
+  }
+}
+@media (width > 67rem) {
+  .nav-link {
+    letter-spacing: 0.09rem;
+  }
+}
+@media (width >= 70rem) {
+  #top-nav,
+  #sticky-nav {
+    padding: 0.375rem 1.375rem;
+  }
 }
 .nav-link:hover,
 .nav-link:focus {
-  background-color: hsl(var(--bg-hsl) / 50%);
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
   text-decoration: underline;
 }
 .nav-link:active {
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
   text-decoration: underline;
 }
 .nav-links:hover .nav-link:active {
+  color: var(--fg);
+  background-color: transparent;
   text-decoration: none;
 }
 .nav-links:hover .nav-link:active:hover,
@@ -349,25 +498,56 @@ header nav {
 /* #endregion */
 
 /* #region Nav Menu */
-#menu-btn {
-  border-radius: 0.25rem;
-  border-width: 1px;
-  background-color: hsl(var(--bg-hsl) / 16%);
-  text-transform: uppercase;
+.nav-icon-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
   margin: 0;
+  height: 2.5rem;
+  justify-content: space-between;
+  gap: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
-#menu-btn span {
+.nav-icon-btn span {
   flex: 0 0 auto;
 }
-#menu-btn svg {
+.nav-icon-btn span {
+  font-size: 1rem;
+}
+.nav-icon-btn .kai-home-text {
+  font-size: 1.375rem;
+}
+.kai-home-text {
+  margin-right: 1px;
+}
+.nav-icon-btn svg {
   flex: 0 0 1.25rem;
   width: 1.25rem;
   height: 1.25rem;
+}
+@media (width < 21rem) {
+  .nav-icon-btn svg {
+    flex: 0 0 19px;
+    width: 19px;
+    height: 19px;
+  }
+  .nav-icon-btn .kai-home-text {
+    font-size: 1.25rem;
+  }
+}
+@media (width < 22.5rem) {
+  .nav-icon-btn {
+    padding: 0.5rem 0.875rem;
+  }
+}
+@media (width > 24rem) {
+  .nav-icon-btn {
+    gap: 0.5rem;
+    min-width: 7rem;
+  }
+  .nav-icon-btn:first-child {
+    min-width: 6.875rem;
+  }
 }
 #close-menu-btn {
   background: transparent;
@@ -397,7 +577,7 @@ header nav {
 #nav-menu {
   position: fixed;
   inset: 0;
-  z-index: 999;
+  z-index: 9999;
   width: 100%;
   height: 100%;
   color: #fff;
@@ -441,7 +621,7 @@ header nav {
   font-size: 1.75rem;
   font-weight: 300;
   line-height: 1.5;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.06rem;
 }
 @keyframes fadeAndSlideUp {
   from {
@@ -474,6 +654,12 @@ header nav {
 }
 #nav-menu li:nth-child(5) {
   --i: 5;
+}
+#nav-menu li:nth-child(6) {
+  --i: 6;
+}
+#nav-menu li:nth-child(7) {
+  --i: 7;
 }
 #nav-menu.opened li {
   animation: fadeAndSlideUp 250ms ease-in-out forwards;
@@ -568,7 +754,7 @@ footer {
   position: relative;
   z-index: 2;
   background: linear-gradient(
-    hsl(var(--blue-hue) 40% 97% / 97%),
+    hsl(110deg 40% 97% / 97%),
     hsl(var(--hue) 25% 95% / 96%)
   );
   padding: 2.5rem 3rem;
@@ -599,19 +785,6 @@ h3 {
   h3 {
     font-size: 1.5rem;
     font-weight: 500;
-  }
-}
-@media (width > 25rem) {
-  .nav-link {
-    letter-spacing: 0.025rem;
-    padding: 1rem 0.75rem;
-  }
-}
-@media (width > 32rem) {
-  .nav-link {
-    letter-spacing: 0.05rem;
-    padding: 1rem 1rem;
-    margin: 0 0 0 0.25rem;
   }
 }
 @media (width < 37.25rem) {
@@ -658,24 +831,8 @@ h3 {
     font-size: 1rem;
     letter-spacing: 0.025rem;
   }
-  header nav {
-    padding: 0.25rem 0.5rem;
-  }
   .logo-link {
     width: 5rem;
-  }
-  .nav-link {
-    padding: 1rem 0.5rem;
-  }
-}
-@media (width < 30rem) {
-  .hide-sm {
-    display: none;
-  }
-}
-@media (width < 21rem) {
-  .nav-link {
-    font-size: 1rem;
   }
 }
 @media (27.75rem < width < 32.5rem) {
