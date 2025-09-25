@@ -19,6 +19,13 @@
   background: linear-gradient(hsl(110deg 90% 50% / 4%), transparent);
   box-shadow: var(--box-shadow-mid);
 }
+@media (width < 46rem) {
+  .segment .inner {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
 .segment h2 {
   text-align: center;
   margin: 0.5rem 0 1rem;
