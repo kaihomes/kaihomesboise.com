@@ -286,8 +286,8 @@
   margin: 0 auto 1rem;
 }
 .kai-dog-img {
-  width: 12rem;
-  height: 12rem;
+  width: 14rem;
+  height: 14rem;
   filter: drop-shadow(0 0 0.5rem hsl(var(--shadow-hsl) / 5%));
 }
 @media (width > 32rem) {
@@ -297,8 +297,9 @@
 }
 @media (width > 45rem) {
   .kai-dog {
-    max-width: 49rem;
+    max-width: 50rem;
     flex-direction: row;
+    gap: 1.625rem;
   }
 }
 .boise-idaho {
