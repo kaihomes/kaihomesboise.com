@@ -66,7 +66,7 @@
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./home.css" />
   </head>
-  <body>
+  <body id="home">
     <nav id="sticky-nav">
       <a href="/" class="nav-icon-btn btn light-btn">
         <svg
@@ -348,12 +348,136 @@
     <main class="backdrop">
       <section class="intro">
         <p>
-          Based in Boise, Idaho since 2013, KAI is a full-service, fully
+          Based in Boise, Idaho since 2013, Kai is a full-service, fully
           licensed and insured general contractor specializing in new
           construction and remodels in the city's historic neighborhoods and
           surrounding areas.
         </p>
       </section>
+      <article class="home-cards-container">
+        <section class="home-cards">
+          <div class="home-card">
+            <a href="./about/">
+              <div>
+                <div class="home-card-circle">
+                  <img
+                    src="./images/home/home-01.webp"
+                    alt="house"
+                    class="home-card-house-img"
+                  />
+                </div>
+                <div>
+                  <h3>About Us</h3>
+                  <p>Learn about our story and philosophy.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="home-card">
+            <a href="./team/">
+              <div>
+                <div class="home-card-circle">
+                  <img
+                    src="./images/home/home-02.webp"
+                    alt="house"
+                    class="home-card-house-img"
+                  />
+                </div>
+                <div>
+                  <h3>Our Team</h3>
+                  <p>Meet the people who make it happen.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="home-card">
+            <a href="./services/">
+              <div>
+                <div class="home-card-circle">
+                  <img
+                    src="./images/home/home-04.webp"
+                    alt="house"
+                    class="home-card-house-img"
+                  />
+                </div>
+                <div>
+                  <h3>Our Services</h3>
+                  <p>Explore our range of expertise.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="home-card">
+            <a href="./process/">
+              <div>
+                <div class="home-card-circle">
+                  <img
+                    src="./images/home/home-03.webp"
+                    alt="house"
+                    class="home-card-house-img"
+                  />
+                </div>
+                <div>
+                  <h3>Our Process</h3>
+                  <p>See how we work with you.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="home-card">
+            <a href="./portfolio/">
+              <div>
+                <div class="home-card-circle">
+                  <img
+                    src="./images/home/home-05.webp"
+                    alt="house"
+                    class="home-card-house-img"
+                  />
+                </div>
+                <div>
+                  <h3>Our Portfolio</h3>
+                  <p>Check out our galleries to see our work.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="home-card home-show-sm">
+            <a href="./contact/">
+              <div>
+                <div class="home-card-circle">
+                  <img
+                    src="./images/home/home-06.webp"
+                    alt="house"
+                    class="home-card-house-img"
+                  />
+                </div>
+                <div>
+                  <h3>Contact Us</h3>
+                  <p>Tell us about your project.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </article>
+      <article>
+        <section>
+          <p>
+            We build and renovate with care, detail, and integrity, because your
+            home should tell your story. With high standards, fair pricing, and
+            genuine craftsmanship, every project is built to endure, designed to
+            inspire, and made distinctly yours.
+          </p>
+        </section>
+        <section>
+          <a href="./contact/" class="home-hide-sm">
+            <div>
+              <h3>Contact Us</h3>
+              <p>Send us a message, and start the conversation.</p>
+            </div>
+          </a>
+        </section>
+      </article>
       <article class="highlights">
         <section class="highlight">
           <div class="img card-img">
@@ -559,9 +683,17 @@
           </a>
         </div>
       </div>
+      <p class="copyright">
+        &copy; <span id="copyright-year">2025</span> Kai LLC. All rights
+        reserved.
+      </p>
     </footer>
     <script src="./loader.js"></script>
     <script src="./hero-slider.js"></script>
     <script src="./nav.js"></script>
+    <script>
+      const year = new Date().getFullYear();
+      document.getElementById("copyright-year").textContent = year;
+    </script>
   </body>
 </html>
