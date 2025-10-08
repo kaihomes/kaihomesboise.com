@@ -1,0 +1,40 @@
+<svg width="384" height="192" viewBox="0 0 384 192" xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg">
+  <style>
+    rect {
+      transform-origin: center;
+      transform-box: fill-box;
+    }
+  </style>
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#000" flood-opacity="0.19" />
+      <feDropShadow dx="5" dy="5" stdDeviation="2" flood-color="#000" flood-opacity="0.19" />
+      <feDropShadow dx="-5" dy="5" stdDeviation="2" flood-color="#000" flood-opacity="0.19" />
+      <feDropShadow dx="5" dy="-5" stdDeviation="2" flood-color="#000" flood-opacity="0.19" />
+      <feDropShadow dx="-5" dy="-5" stdDeviation="2" flood-color="#000" flood-opacity="0.19" />
+    </filter>
+  </defs>
+  <title>KAI</title>
+  <g id="svg_layer" font-size="16" opacity="0.38" filter="url(#shadow)">
+    <g id="svg_kai" transform="translate(-11) scale(1.1)">
+      <g id="svg_kai-letters" fill="#fff">
+        <g id="svg_k">
+          <rect height="10rem" width="2rem" x="1rem" y="1rem" />
+          <g>
+            <rect height="5rem" width="2.25rem" x="4.875rem" y="1rem" transform="skewX(-40)" />
+            <rect height="5rem" width="2.25rem" x="4.875rem" y="6rem" transform="skewX(40)" />
+          </g>
+        </g>
+        <g id="svg_a">
+          <g>
+            <rect height="10rem" width="2.125rem" y="1rem" x="182" transform="skewX(-20)" />
+            <rect height="10rem" width="2.125rem" y="1rem" x="244" transform="skewX(20)" />
+          </g>
+          <rect height="1.875rem" width="5rem" x="11.75rem" y="7.125rem" />
+        </g>
+        <rect id="svg_i" height="10rem" width="2rem" x="20rem" y="1rem" />
+      </g>
+    </g>
+  </g>
+</svg>

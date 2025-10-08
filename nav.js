@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const mainEl = document.querySelector("main");
-  const stickyPoint = mainEl.getBoundingClientRect().top + window.scrollY + 96;
+  const stickyPoint = mainEl.getBoundingClientRect().top + window.scrollY + 80;
   const nav1 = _getEl("sticky-nav");
   const nav2 = _getEl("top-nav");
   function checkScroll() {
