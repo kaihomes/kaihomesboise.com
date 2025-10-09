@@ -171,3 +171,26 @@ h1 {
 .photo:hover::after {
   opacity: 0;
 }
+#videos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-direction: column;
+  padding: 1rem;
+}
+.ytplayer {
+  --available-width: calc(100vw - 4.5rem);
+  --vid-width: var(--available-width);
+  --vid-height: calc((var(--vid-width) / 16) * 9 + 1rem);
+  min-height: var(--vid-height);
+}
+@media (width > 38rem) {
+  #videos {
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+  .ytplayer {
+    --vid-width: calc(var(--available-width) / 3);
+  }
+}
