@@ -42,6 +42,10 @@
   color: hsl(var(--hue) 40% 10%);
   line-height: 1.25;
 }
+.segment .inner p a {
+  text-decoration: underline;
+  color: hsl(150 100% 20%);
+}
 #services .separator {
   max-width: 44rem;
   margin: 0 auto 2rem;
