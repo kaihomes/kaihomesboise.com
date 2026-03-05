@@ -2,9 +2,10 @@ let curr = 1;
 let total = 10;
 
 const feature = document.getElementById("feature");
+const fileExt = feature.src.split(".").pop();
 
 function update() {
-  feature.src = `./${curr}.jpg`;
+  feature.src = `./${curr}.${fileExt}`;
 }
 
 function show(num = 1) {
@@ -17,13 +18,13 @@ function show(num = 1) {
   });
 }
 
-function render(count = 10) {
+function render(count = 10, format = "jpg") {
   total = count;
   let html = "";
   for (let i = 1; i <= total; i++) {
     html += `
     <div class="photo" onclick="show(${i})">
-      <img src="./${i}.jpg" alt="photo ${i}" />
+      <img src="./${i}.${format}" alt="photo ${i}" />
     </div>
     `;
   }
