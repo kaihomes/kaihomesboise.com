@@ -65,6 +65,7 @@
     <!-- stylesheets -->
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="./form.css" />
+    <link rel="preconnect" href="https://challenges.cloudflare.com">
   </head>
   <body>
     <nav id="sticky-nav">
@@ -417,6 +418,7 @@
                 placeholder="Message"
                 required
               ></textarea>
+              <div class="cf-turnstile" data-theme="light" data-size="flexible" data-sitekey="0x4AAAAAACmWlvqKWaPvDWBn"></div>
               <div class="center">
                 <button type="submit" class="btn light-btn form-btn">
                   Send Message
@@ -543,5 +545,6 @@
     <script src="./form.js"></script>
     <script src="../hero-slider.js"></script>
     <script src="../nav.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </body>
 </html>
