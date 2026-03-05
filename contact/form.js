@@ -61,7 +61,6 @@ form.addEventListener("submit", (e) => {
     spinnerDiv.innerHTML = "";
     loadingDiv.style.display = "none";
     successDiv.style.display = "block";
-    if (window.turnstile.reset) turnstile.reset();
   });
   return false;
 });
